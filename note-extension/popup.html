@@ -7,27 +7,37 @@
 </head>
 
 <body>
-    <h1>URL Notes</h1>
-    <textarea id="note" placeholder="Write your note here..."></textarea>
-    <button id="save-note">Save Note</button>
-
-    <h2>Notes for this URL</h2>
-    <ul id="url-notes" class="note-container"></ul>
-    <br>
-    <hr>
-    <div id="toggle-container">
-        <!-- Rounded switch -->
-        <label class="switch">
-            <input type="checkbox" id="toggle-base-url" />
-            <span class="slider round"></span>
-        </label>
-        <label for="toggle-base-url">Show Base URL Notes</label>
+    <!-- HEADER -->
+    <div id="header">
+        <h1>My Notes</h1>
     </div>
 
-    <h2 id="base-url-title" style="display: none;">Notes for this Base URL</h2>
-    <ul id="base-url-notes" class="note-container" style="display: none;"></ul>
+    <!-- MAIN PAGE -->
+    <div id="main-page" class="container">
+        <br>
+        <ul id="url-notes" class="note-container"></ul>
+        <br>
+        <button id="add-note">Add a Note</button>
+        <div id="toggle-container">
+            <!-- Rounded switch -->
+            <label class="switch">
+                <input type="checkbox" id="toggle-base-url" />
+                <span class="slider round"></span>
+            </label>
+            <label for="toggle-base-url">Show Base URL Notes</label>
+        </div>
 
-    <script src="popup.js"></script>
+        <h2 id="base-url-title" style="display: none;">Notes for this Base URL</h2>
+        <ul id="base-url-notes" class="note-container" style="display: none;"></ul>
+    </div>
+
+    <!-- ADD NOTE PAGE -->
+    <div id="add-note-page" class="container hidden">
+        <textarea id="note" placeholder="Write your note here..."></textarea>
+        <button id="save-note">Save Note</button>
+
+    </div>
+    <script src="popup.js" defer></script>
 </body>
 
 </html>
